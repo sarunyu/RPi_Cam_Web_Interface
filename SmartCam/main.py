@@ -1,9 +1,6 @@
 import json
 import Adafruit_DHT
 import time
-#import cronus.beat as beat
-#from cronus.timeout import timeout, TimeoutError
-import time
 import datetime
 from influxdb import InfluxDBClient
 
