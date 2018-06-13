@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Insert line token here
-line_token=
+line_token=WzZweyeasnB7JKPBbHZ11dOEytNlExPOGJiNjqouANk
 
 echo "Sending Line Notify"
 curl -X POST -H "Authorization: Bearer $line_token" -F "message=Motion Detect" -F "imageFile=@$1" https://notify-api.line.me/api/notify
