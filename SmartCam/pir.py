@@ -4,8 +4,6 @@ import time
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(4, GPIO.IN) #PIR
 
-
-
 try:
     time.sleep(2) # to stabilize sensor
     while True:
