@@ -3,8 +3,8 @@ Description=PIR Service
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/python3 /home/pi/SmartCam/pir.py
-ExecStop=/usr/bin/killall python3 /home/pi/SmartCam/pir.py
+ExecStart=/usr/bin/python3 /home/pi/RPi_Cam_Web_Interface/SmartCam/pir.py
+ExecStop=/usr/bin/killall python3 /home/pi/RPi_Cam_Web_Interface/SmartCam/pir.py
 User=pi
 Restart=on-failure
 
