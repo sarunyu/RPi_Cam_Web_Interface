@@ -54,13 +54,13 @@ def send_data():
 
 def setup():
    list_cmd  = ['um 3 SendLine.sh','ab 1','an Starting...']
-
+   time.sleep(3)
    for cmd in list_cmd:
      print(cmd)
      file = open("/var/www/html/FIFO","w")
      file.write(cmd)
      file.close()
-     time.sleep(0.4)
+     time.sleep(1)
 
 if __name__ == "__main__":
     setup()
