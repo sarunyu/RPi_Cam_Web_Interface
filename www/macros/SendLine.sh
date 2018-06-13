@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#Insert line token here
 line_token=
 
 echo "Sending Line Notify"
