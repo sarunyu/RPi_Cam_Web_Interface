@@ -1,0 +1,33 @@
+version: '2'
+services:
+  influxdb:
+    restart: always
+    image: influxdb
+    container_name: influxdb
+    ports:
+      - "8086:8086"
+    volumes:
+      - influxdb_data:/var/lib/influxdb
+    environment:
+      - INFLUXDB_DB=data
+
+  grafana:
+    restart: always
+    depends_on:
+      - influxdb
+    image: fg2it/grafana-armhf:v5.1.3
+    container_name: grafana
+    ports:
+      - "3001:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_INSTALL_PLUGINS=ryantxu-ajax-panel,natel-discrete-panel,grafana-clock-panel,briangann-gauge-panel,grafana-piechart-panel,neocat-cal-heatmap-panel
+
+
+volumes:
+    influxdb_data:
+    grafana_data:
+    chronograf_data:
