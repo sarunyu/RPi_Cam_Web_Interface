@@ -3,7 +3,6 @@ Description=SmartCam Service
 After=network.target
 
 [Service]
-ExecStartPre=/usr/bin/python3 /home/pi/RPi_Cam_Web_Interface/SmartCam/pir.py
 ExecStart=/usr/bin/python3 /home/pi/RPi_Cam_Web_Interface/SmartCam/main.py
 ExecStop=/usr/bin/killall python3 /home/pi/RPi_Cam_Web_Interface/SmartCam/main.py
 User=pi
