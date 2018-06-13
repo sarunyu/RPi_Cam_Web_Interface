@@ -30,4 +30,3 @@ services:
 volumes:
     influxdb_data:
     grafana_data:
-    chronograf_data:
