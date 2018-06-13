@@ -335,6 +335,9 @@ if [ -e /var/www$rpicamdir/index.html ]; then
    sudo rm /var/www$rpicamdir/index.html
 fi
 
+sudo chmod +x /var/www$rpicamdir/macros/*
+
+
 if [[ "$phpversion" == "7" ]]; then
    phpv=php7.0
 else
